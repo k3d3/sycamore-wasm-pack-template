@@ -1,5 +1,5 @@
 [package]
-name = "sycamore-webpack-template"
+name = "sycamore-wasm-pack-template"
 version = "0.2.0"
 authors = ["k3d3", "Yew Maintainers <maintainers@yew.rs"]
 edition = "2021"
