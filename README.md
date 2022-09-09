@@ -1,6 +1,6 @@
 ## About
 
-This template shows how to create a web app using Yew and wasm-pack. 
+This template shows how to create a web app using Sycamore and wasm-pack. 
 
 ## 🚴 Usage
 
@@ -27,5 +27,3 @@ yarn run dev
 
 * [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
   between WebAssembly and JavaScript.
-* [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
-  for small code size.

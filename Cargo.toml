@@ -1,22 +1,16 @@
 [package]
-name = "yew-wasm-pack-template"
+name = "sycamore-webpack-template"
 version = "0.2.0"
-authors = ["Yew Maintainers <maintainers@yew.rs"]
-edition = "2018"
+authors = ["k3d3", "Yew Maintainers <maintainers@yew.rs"]
+edition = "2021"
 
 [lib]
-crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib"]
 
 [dependencies]
-log = "0.4"
-strum = "0.19"
-strum_macros = "0.19"
-serde = "1"
-serde_derive = "1"
+sycamore = "0.8.1"
 wasm-bindgen = "0.2.58"
 wasm-logger = "0.2"
-wee_alloc = { version = "0.4.4", optional = true }
-yew = "0.17"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3"
@@ -26,3 +20,11 @@ version = "0.3.4"
 features = [
   'KeyboardEvent',
 ]
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "z"
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Oz']
